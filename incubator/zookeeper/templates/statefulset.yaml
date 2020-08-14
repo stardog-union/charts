@@ -67,21 +67,21 @@ spec:
               command:
                 - sh
                 - /config-scripts/ok
-            initialDelaySeconds: 20
-            periodSeconds: 30
-            timeoutSeconds: 5
-            failureThreshold: 2
-            successThreshold: 1
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+            successThreshold: {{ .Values.livenessProbe.successThreshold }}
           readinessProbe:
             exec:
               command:
                 - sh
                 - /config-scripts/ready
-            initialDelaySeconds: 20
-            periodSeconds: 30
-            timeoutSeconds: 5
-            failureThreshold: 2
-            successThreshold: 1
+            initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
+            successThreshold: {{ .Values.readinessProbe.successThreshold }}
           env:
             - name: ZK_REPLICAS
               value: {{ .Values.replicaCount | quote }}
