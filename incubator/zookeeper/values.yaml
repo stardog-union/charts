@@ -129,6 +129,20 @@ persistence:
   accessMode: ReadWriteOnce
   size: 5Gi
 
+readinessProbe:
+  initialDelaySeconds: 20
+  periodSeconds: 30
+  timeoutSeconds: 5
+  failureThreshold: 2
+  successThreshold: 1
+
+readinessProbe:
+  initialDelaySeconds: 20
+  periodSeconds: 30
+  timeoutSeconds: 5
+  failureThreshold: 2
+  successThreshold: 1
+
 ## Exporters query apps for metrics and make those metrics available for
 ## Prometheus to scrape.
 exporters:
