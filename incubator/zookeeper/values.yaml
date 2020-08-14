@@ -129,7 +129,7 @@ persistence:
   accessMode: ReadWriteOnce
   size: 5Gi
 
-readinessProbe:
+livenessProbe:
   initialDelaySeconds: 20
   periodSeconds: 30
   timeoutSeconds: 5
