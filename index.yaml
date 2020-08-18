@@ -3,10 +3,10 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2020-08-14T19:56:42.203194-07:00"
+    created: "2020-08-18T12:08:30.270005-07:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
-    digest: a269ed21d73707a4ec173fc24d40521ea3b1936b61123928b3209d0edcc70811
+    digest: 38473447c54dc323ffd460ef97f405ba787aeda895079f3733084b355e7b4170
     home: https://zookeeper.apache.org/
     icon: https://zookeeper.apache.org/images/zookeeper_small.gif
     kubeVersion: ^1.10.0-0
@@ -22,4 +22,4 @@ entries:
     urls:
     - https://stardog-union.github.io/helm-hub/zookeeper-2.1.5.tgz
     version: 2.1.5
-generated: "2020-08-14T19:56:42.199723-07:00"
+generated: "2020-08-18T12:08:30.26433-07:00"
