@@ -42,11 +42,14 @@ spec:
 {{- if .Values.schedulerName }}
       schedulerName: "{{ .Values.schedulerName }}"
 {{- end }}
+      serviceAccountName: {{ .Values.serviceAccountName }}
+  {{ if .Values.securityContext.enabled }}
       securityContext:
-{{ toYaml .Values.securityContext | indent 8 }}
-{{- if .Values.priorityClassName }}
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup: {{ .Values.securityContext.fsGroup  }}
+  {{ end }}
       priorityClassName: "{{ .Values.priorityClassName }}"
-{{- end }}
       containers:
 
         - name: zookeeper
